@@ -1,0 +1,15 @@
+{
+    "name":"Maven",
+    "slug":"Maven",
+    "author":"Orphevs",
+    "version":"1.0.0",
+    "apiID":0,
+    "slider":true,
+    "configurations":{
+        "slider":"true",
+        "navbar":"navbar2",
+        "favicon_url":"",
+        "logo":false
+    },
+    "supported":{}
+}

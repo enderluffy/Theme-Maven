@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Pangram Light";
+    src: url("../fonts/Pangram-Light.otf");
+}
+
+@font-face {
+    font-family: "Pangram Regular";
+    src: url("../fonts/Pangram-Regular.otf");
+}
+
+@font-face {
+    font-family: "Pangram Medium";
+    src: url("../fonts/Pangram-Medium.otf");
+}
+
+@font-face {
+    font-family: "Pangram Bold";
+    src: url("../fonts/Pangram-Bold.otf");
+}
+
+@font-face {
+    font-family: "Pangram ExtraBold";
+    src: url("../fonts/Pangram-ExtraBold.otf");
+}
+
+
+body{
+    font-family: 'Pangram Light', 'Open Sans', sans-serif;
+}

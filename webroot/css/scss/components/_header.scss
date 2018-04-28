@@ -1,0 +1,173 @@
+.header{
+    height: 60px;
+    background: $primary-bg-color;
+    @include box-shadow;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    
+    @include respond-below(md){
+        display: none;
+    }
+    
+    .left{
+        display: inline-flex;
+        
+        .logo{
+            padding: 16px 70px;
+            font-size: 26px;
+            font-family: 'Pangram ExtraBold';
+            color: #fff;
+            background: $secondary-bg-color;
+            @include box-shadow;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .menu{
+            padding: 0px 20px;
+            display: inline-flex;
+            align-self: center;
+
+            li{
+                font-size: 16px;
+                font-family: 'Pangram Regular';
+                text-align: center;
+                padding: 0px 14px;
+                color: #fff;
+                cursor: pointer;
+                min-height: 60px;
+                vertical-align: middle;
+                line-height: 60px; // Custom height navbar
+                
+                a{
+                    color: inherit;
+                    text-decoration: none;
+                }
+            }
+            
+            li::before{
+                content: attr(data-name);
+                position: absolute;
+                height: 2px;
+                width: auto;
+                background: transparent;
+                color: transparent;
+                pointer-events: none;
+                opacity: 1;
+                transition: $transition;
+                top: 44px;
+            }
+            
+            li:hover::before{
+                content: attr(data-name);
+                position: absolute;
+                height: 2px;
+                width: auto;
+                background: $selected-color;
+                color: transparent;
+                pointer-events: none;
+                opacity: 1;
+                transition: $transition;
+                top: 44px;
+            }
+        }
+    }
+    
+    .right{
+        display: inline-flex;
+        
+        .profile{
+            background: $secondary-bg-color;
+            @include box-shadow;
+            height: auto;
+            padding: 0px 40px;
+            .user-infos{
+                color: #fff;
+                display: inline-block;
+                padding: 12px 0;
+                
+                .user-disconnected{
+                    margin-top: 10px;
+                }
+                
+                .avatar{
+                    height: 38px;
+                    width: 38px;
+                    overflow: hidden;
+                    border-radius: 100%;
+                    background: $primary-bg-color;
+                    text-align: center;
+                    vertical-align: middle;
+                    margin-right: 15px;
+                }
+                
+                .username{
+                    vertical-align: middle;
+                    font-size: 15px;
+                    font-family: 'Pangram Regular';
+                }
+                
+                i{
+                    vertical-align: middle;
+                    margin-left: 5px;
+                    margin-top: -5px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    
+    .user-infos-dropdown-btn{
+        cursor: pointer;
+        user-select: none;
+    }
+    
+    .user-infos-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        float: left;
+        min-width: 10rem;
+        padding: 0;
+        margin: .125rem 0 0;
+        font-size: 14px;
+        color: #212529;
+        text-align: left;
+        list-style: none;
+        background: $primary-bg-color;
+        border: none;
+        border-radius: 0;
+        line-height: inherit;
+        margin-top: 0px;
+        width: 100%;
+        display: none;
+        
+        li{            
+            a{
+                line-height: 1!important;
+                min-height: inherit !important;
+                padding: 14px 10px !important;
+                color: #fff;
+                display: block;
+            }
+        }
+        
+        li:hover{ // Hover dropdown li
+            background: $selected-color-hover;
+        }
+    }
+    
+    a{
+        color: inherit;
+    }
+    
+    a:hover{
+        text-decoration: none;
+    }
+    
+}
