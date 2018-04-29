@@ -7,7 +7,7 @@
     width: 100%;
     justify-content: space-between;
     position: relative;
-    z-index: 2;
+    z-index: 1001;
     
     @include respond-below(md){
         display: none;
@@ -47,6 +47,58 @@
                     color: inherit;
                     text-decoration: none;
                 }
+                
+                .dropdown-menu {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    z-index: 1000;
+                    float: left;
+                    min-width: 160px;
+                    padding: 0;
+                    margin: 0;
+                    font-size: 14px;
+                    text-align: left;
+                    list-style: none;
+                    -webkit-background-clip: padding-box;
+                    background-clip: padding-box;
+                    border: 0;
+                    border-radius: 0px;
+                    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+                    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+                    // Add
+                    background: $primary-bg-color;
+                    
+                    li{
+                        font-size: 15px;
+                        font-family: 'Pangram Regular';
+                        text-align: left;
+                        padding: 0px;
+                        color: rgba(255,255,255,0.5);
+                        cursor: pointer;
+                        min-height: inherit;
+                        vertical-align: middle;
+                        line-height: inherit;
+                        transition: $transition;
+                        
+                        a{
+                            display: block;
+                            padding: 14px 20px;
+                            clear: both;
+                            font-weight: inherit;
+                            line-height: 1;
+                            color: inherit;
+                            white-space: nowrap;
+                        }
+                    }
+                    
+                    li:hover{
+                        color: #fff;
+                        a{
+                            background: rgba(0,0,0,0.2);
+                        }
+                    }
+                }
             }
             
             li::before{
@@ -73,6 +125,19 @@
                 opacity: 1;
                 transition: $transition;
                 top: 44px;
+            }
+            
+            .actived::before{
+                content: attr(data-name);
+                position: absolute;
+                height: 2px;
+                width: auto;
+                background: $selected-color;
+                color: transparent;
+                pointer-events: none;
+                opacity: 1;
+                transition: $transition;
+                top: 44px;                
             }
         }
     }

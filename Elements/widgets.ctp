@@ -8,7 +8,7 @@
             <img src="theme/<?= $this->theme; ?>/img/coffre.png" alt="coffre" class="coffre">
             <img src="theme/<?= $this->theme; ?>/img/diamant.png" alt="diamant" class="diamant">
         </div>
-        <h3>Votez pour <span class="blue">Maven</span> et gagnez des <span class="blue">récompenses.</span></h3>
+        <h3>Votez pour <span class="blue"><?= $website_name ?></span> et gagnez des <span class="blue">récompenses.</span></h3>
         <a href="#" class="btn-theme">Voter</a>
     </div>
     <div class="socials container-theme">

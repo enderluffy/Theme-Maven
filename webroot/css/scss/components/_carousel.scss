@@ -5,6 +5,7 @@
     @include respond-below(sm) {
         .carousel-inner .item img{
             height: inherit;
+            min-height: 300px;
         }
     }
     
