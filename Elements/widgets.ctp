@@ -16,16 +16,16 @@
         <ul>            
             <?php
             if(!empty($skype_link)) {
-                echo '<a href="'.$skype_link.'" target="_blank"><li class="skype"><i class="fab fa-skype"></i></li></a>';
+                echo '<a href="'.$skype_link.'" target="_blank"><li class="skype"><i class="fa fa-skype"></i></li></a>';
             }
             if(!empty($youtube_link)) {
-                echo '<a href="'.$youtube_link.'" target="_blank"><li class="youtube"><i class="fab fa-youtube"></i></li></a>';
+                echo '<a href="'.$youtube_link.'" target="_blank"><li class="youtube"><i class="fa fa-youtube"></i></li></a>';
             }
             if(!empty($twitter_link)) {
-                echo '<a href="'.$twitter_link.'" target="_blank"><li class="twitter"><i class="fab fa-twitter"></i></li></a>';
+                echo '<a href="'.$twitter_link.'" target="_blank"><li class="twitter"><i class="fa fa-twitter"></i></li></a>';
             }
             if(!empty($facebook_link)) {
-                echo '<a href="'.$facebook_link.'" target="_blank"><li class="facebook"><i class="fab fa-facebook-f"></i></li></a>';
+                echo '<a href="'.$facebook_link.'" target="_blank"><li class="facebook"><i class="fa fa-facebook-f"></i></li></a>';
             }
             ?>
             

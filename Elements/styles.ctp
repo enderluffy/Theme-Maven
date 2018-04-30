@@ -7,5 +7,5 @@
 ?>
 
 
-<?= $this->Html->css('fontawesome-all.min.css') // FontAwesome V-5.0.10 (CSS & Webfonts) ?>
+
 <?= $this->Html->css('styles.css') // Stylesheet principale gérée en SCSS ?>
