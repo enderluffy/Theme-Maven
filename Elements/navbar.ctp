@@ -10,7 +10,7 @@
             </a>
         </div>
         <ul class="menu">
-            <li data-name="<?= $Lang->get('GLOBAL__HOME') ?>" class=" <?php if($this->params['controller'] == 'pages') { ?>actived<?php } ?>"><a href="<?= $this->Html->url('/') ?>"><?= $Lang->get('GLOBAL__HOME') ?></a></li>
+            <li class=" <?php if($this->params['controller'] == 'pages') { ?>actived<?php } ?>"><a href="<?= $this->Html->url('/') ?>" data-name="<?= $Lang->get('GLOBAL__HOME') ?>"><?= $Lang->get('GLOBAL__HOME') ?></a></li>
             <?php
                 if(!empty($nav)) {
                     $i = 0;
@@ -19,14 +19,14 @@
                     foreach ($nav as $key => $value) { ?>
                         <?php 
                             if(empty($value['Navbar']['submenu'])) { ?>
-                            <li data-name="<?= $value['Navbar']['name'] ?>" class="li-nav<?php if($i < $count2) { echo ' pull-left'; } elseif($i >= $count2) { echo ' pull-right'; } ?><?php if($this->params['controller'] == $value['Navbar']['name']) { ?> actived<?php } ?>">
-                                <a href="<?= $value['Navbar']['url'] ?>"<?= ($value['Navbar']['open_new_tab']) ? ' target="_blank"' : '' ?>>
+                            <li class="li-nav<?php if($i < $count2) { echo ' pull-left'; } elseif($i >= $count2) { echo ' pull-right'; } ?><?php if($this->params['controller'] == $value['Navbar']['name']) { ?> actived<?php } ?>">
+                                <a href="<?= $value['Navbar']['url'] ?>"<?= ($value['Navbar']['open_new_tab']) ? ' target="_blank"' : '' ?> data-name="<?= $value['Navbar']['name'] ?>">
                                     <?= $value['Navbar']['name'] ?>
                                 </a>
                             </li>
                         <?php } else { ?>
-                        <li data-name="<?= $value['Navbar']['name'] ?>" class="dropdown<?php if($i < $count2) { echo ' pull-left'; } elseif($i >= $count2) { echo ' pull-right'; } ?> <?php if($this->params['controller'] == $value['Navbar']['name']) { ?>actived<?php } ?>">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <li class="dropdown<?php if($i < $count2) { echo ' pull-left'; } elseif($i >= $count2) { echo ' pull-right'; } ?> <?php if($this->params['controller'] == $value['Navbar']['name']) { ?>actived<?php } ?>">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-name="<?= $value['Navbar']['name'] ?>">
                                     <?= $value['Navbar']['name'] ?>
                                     <span class="caret"></span>
                                 </a>

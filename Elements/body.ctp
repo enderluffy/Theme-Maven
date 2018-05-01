@@ -8,15 +8,17 @@
 ?>
    
 
-   <?php
-    // Affiche les messages propre au CMS dans des alerts Bootstrap
-    $flash_messages = $this->Session->flash();
-    if(!empty($flash_messages)) {
-        echo '<div class="container">'.$flash_messages.'</div>';
-    }
-?>
+
 
 <?= $this->element('navbar') // Affiche la NavBar ?>
+
+<?php
+    // Affiche les messages propre au CMS dans des alerts Bootstrap
+    $flash_messages = $this->Session->flash();
+if(!empty($flash_messages)) {
+    echo '<div class="flash-message container">'.$flash_messages.'</div>';
+}
+?>
 
 <?= 
     // Affiche le contenu de la page (Page d'accueil ou la page boutique, etc)

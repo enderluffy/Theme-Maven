@@ -10,8 +10,8 @@
         <div class="news-actions">
             <div class="left">
                 <ul class="infos">
-                    <li class="comments"><?= $v['News']['count_comments'] ?> <i class="fas fa-comments"></i></li>
-                    <li class="likes"><?= $v['News']['count_likes'] ?> <i class="fas fa-heart"></i></li>
+                    <li class="comments"><?= $v['News']['count_comments'] ?> <i class="fa fa-comments"></i></li>
+                    <li class="likes"><?= $v['News']['count_likes'] ?> <i class="fa fa-heart"></i></li>
                 </ul>
             </div>
             <div class="right">

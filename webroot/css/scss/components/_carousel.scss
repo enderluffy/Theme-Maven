@@ -10,7 +10,7 @@
     }
     
     .carousel-caption{
-        padding-bottom: 130px;
+        top: 150px;
         
         @include respond-below(sm){
             display: none;

@@ -1,3 +1,9 @@
 body{
     background: $primary-bg-color;
+    padding: 0 !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.flash-message{
+    margin-top: 40px;
 }

@@ -36,14 +36,13 @@
                 font-size: 16px;
                 font-family: 'Pangram Regular';
                 text-align: center;
-                padding: 0px 14px;
                 color: #fff;
-                cursor: pointer;
                 min-height: 60px;
                 vertical-align: middle;
                 line-height: 60px; // Custom height navbar
                 
                 a{
+                    padding: 0px 14px;
                     color: inherit;
                     text-decoration: none;
                 }
@@ -101,7 +100,7 @@
                 }
             }
             
-            li::before{
+            li a::before{
                 content: attr(data-name);
                 position: absolute;
                 height: 2px;
@@ -114,7 +113,7 @@
                 top: 44px;
             }
             
-            li:hover::before{
+            li a:hover::before{
                 content: attr(data-name);
                 position: absolute;
                 height: 2px;
@@ -127,7 +126,7 @@
                 top: 44px;
             }
             
-            .actived::before{
+            .actived > a::before{
                 content: attr(data-name);
                 position: absolute;
                 height: 2px;

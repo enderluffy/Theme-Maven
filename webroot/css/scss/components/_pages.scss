@@ -1,0 +1,10 @@
+// Page profil
+
+.profile{
+    padding-bottom: 100px;
+    @include panel-custom();
+    
+    .title{
+        @include title-page();
+    }
+}
