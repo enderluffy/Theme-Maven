@@ -1,10 +1,127 @@
 // Page profil
-
-.profile{
+.profile {
     padding-bottom: 100px;
     @include panel-custom();
-    
-    .title{
+
+    .title {
         @include title-page();
+    }
+}
+
+// Page "page"
+.page {
+    padding-bottom: 100px;
+
+    .title {
+        @include title-page();
+    }
+
+    .content {
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.3;
+
+        @include content-css();
+    }
+}
+
+// Page "news"
+.news {
+    padding-bottom: 100px;
+
+    .news-content {
+        padding: 40px 30px;
+
+        .title {
+            @include title-page();
+            padding: 0;
+            padding-bottom: 30px
+        }
+
+        .content {
+            color: #fff;
+            font-size: 16px;
+            line-height: 1.3;
+
+            @include content-css();
+        }
+
+        .created {
+            text-align: right;
+            font-size: 14px;
+            display: block;
+            width: 100%;
+        }
+
+        .author {
+            text-align: right;
+            font-size: 13px;
+            padding-top: 10px;
+            display: block;
+            width: 100%;
+        }
+
+        .avatar {
+            vertical-align: sub;
+            margin-left: 5px;
+        }
+    }
+
+    .news-brand {
+        margin-top: 40px;
+        text-align: center;
+        padding: 30px 20px;
+
+        .like-message {
+            padding-bottom: 20px;
+        }
+    }
+    
+    .news-comments{
+        .title {
+            @include title-page();
+            font-size: 20px;
+        }
+        
+        .comment{
+            margin-bottom: 50px;
+            
+            .comment-head{
+                vertical-align: top;
+                text-align: center;
+                
+                .username{
+                    display: block;
+                    padding-top: 15px;
+                    font-family: 'Pangram Medium';
+                    font-size: 16px;
+                }
+            }
+            
+            .comment-body{
+                vertical-align: top;
+                padding: 0 20px;
+                font-size: 14px;
+                line-height: 1.4;
+                min-height: 100px;
+                padding-bottom: 40px;
+                padding-right: 50px;
+                border-left: solid 2px rgba(0,0,0,0.15);
+                
+                .created{
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    font-size: 13px;
+                }
+                
+                .comment-controls{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }
+        
     }
 }

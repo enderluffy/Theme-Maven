@@ -119,6 +119,23 @@ $transition : 0.25s;
     }
 }
 
+@mixin content-css(){
+    
+    img{
+        max-width: 100%;
+        height: auto;
+        margin: 15px 0;
+    }
+
+    strong{
+        font-weight: bold;
+    }
+
+    em{
+        font-style: italic;
+    }
+}
+
 /* Classes */
 
 .btn-theme{
@@ -132,10 +149,16 @@ $transition : 0.25s;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
+    border: 0;
 }
 
 .btn-theme:hover{
     background: $selected-color-hover;
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-theme:focus, .btn-theme:active{
     text-decoration: none;
     color: #fff;
 }
