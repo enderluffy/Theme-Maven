@@ -1,4 +1,4 @@
-<div class="container news">
+<div class="container news-page">
     <div class="row">
         <div class="news-content container-theme">
             <h1 class="title">

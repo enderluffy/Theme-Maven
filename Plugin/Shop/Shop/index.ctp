@@ -27,38 +27,29 @@
           <a href="#" data-toggle="modal" data-target="#cart-modal" class="btn-theme btn-width  pull-right"><?= $Lang->get('SHOP__BUY_CART') ?></a>
         <?php } ?>
       </div>
-      <div class="col-md-9">
+      <div class="col-md-9 vote-items">
         <div class="row">
           <?= $vouchers->get_vouchers() // Les promotions en cours ?>
         </div>
 
         <div class="row">
           <?php
-          $col = 4;
           $i = 0;
           foreach ($search_items as $k => $v) {
             if(!isset($category) AND $v['Item']['category'] == $search_first_category OR isset($category) AND $v['Item']['category'] == $category) {
               $i++;
-              $newRow = ( ( $i % ( (12 / $col) ) ) == 0);
           ?>
-            <div class="panel panel-default panel-shop col-sm-<?= $col ?> col-lg-<?= $col ?> col-md-<?= $col ?>">
+            <div class="col-md-4">
+                <div class="panel panel-default panel-shop">
                    <div class="panel-body">
                        <?php if(isset($v['Item']['img_url'])) { ?><img src="<?= $v['Item']['img_url'] ?>" alt=""><?php } ?>
                        <h3 class="name"><?= $v['Item']['name'] ?></h3>
                        <h5 class="price"><?= $v['Item']['price'] ?> <?php if($v['Item']['price'] == 1) { echo  ' '.$singular_money; } else { echo  ' '.$plural_money; } ?></h5>
-                       <p class="description"><?=
-                              $this->Text->truncate(
-                              strip_tags($v['Item']['description']),
-                              140,
-                              array('ellipsis' => '...', 'html' => true)
-                          )
-                                           ?></p>
-                       <?php if($isConnected AND $Permissions->can('CAN_BUY')) { ?><button class="btn-theme pull-right display-item" data-item-id="<?= $v['Item']['id'] ?>"><?= $Lang->get('SHOP__BUY') ?></button> <?php } ?>
+                       <br>
+                       <?php if($isConnected AND $Permissions->can('CAN_BUY')) { ?><button class="btn-theme btn-width display-item" data-item-id="<?= $v['Item']['id'] ?>"><?= $Lang->get('SHOP__BUY') ?></button> <?php } ?>
                    </div>
                 </div>
-
-              <?= ($newRow) ? '</div>' : '' ?>
-              <?= ($newRow) ? '<div class="row">' : '' ?>
+            </div>
             <?php } ?>
           <?php } ?>
         </div>
