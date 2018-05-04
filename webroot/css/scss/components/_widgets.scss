@@ -99,9 +99,7 @@
             display: block;
             margin-top: 50px;
             text-align: left;
-            @include respond-below(sm) {
-                text-align: center;
-            }
+            text-align: center;
             
             li{
                 display: inline-block;

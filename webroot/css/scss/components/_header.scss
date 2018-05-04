@@ -25,6 +25,12 @@
             @include box-shadow;
             height: auto;
             cursor: pointer;
+            
+            a{
+                img{
+                    max-height: 30px;
+                }
+            }
         }
 
         .menu{

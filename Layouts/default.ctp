@@ -34,8 +34,12 @@
         // CSS du thème
         $this->element('styles')
     ?>
-
-    <link rel="icon" type="image/png" href="<?= $theme_config['favicon_url'] ?>" />
+    
+    <?php if(isset($theme_config['favicon_url']) && $theme_config['favicon_url']) { ?>
+        <link rel="icon" type="image/png" href="<?= $theme_config['favicon_url'] ?>" />
+    <?php } else { ?>
+        <link rel="icon" type="image/png" href="<?= $this->Html->url('/') . 'theme/' . $this->theme  ?>/img/favicon.png" />
+    <?php } ?>
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>

@@ -7,4 +7,10 @@
 ?>
 
 <?= $this->Html->script('main.js') ?>
+<?= $this->Html->script('clipboard.min.js') ?>
+<script>
+    $( document ).ready(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
 

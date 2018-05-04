@@ -6,7 +6,7 @@
     <div class="news-u container-theme">
         <span class="date">Publié le 15/04/2018 à 20h36</span>
         <h3><?= cut($v['News']['title'], 60, array('ellipsis' => '...', 'html' => true)) ?></h3>
-        <p><?= $this->Text->truncate($v['News']['content'], 170, array('ellipsis' => '...', 'html' => true)) ?></p>
+        <p><?= $this->Text->truncate($v['News']['content'], 320, array('ellipsis' => '...', 'html' => true)) ?></p>
         <div class="news-actions">
             <div class="left">
                 <ul class="infos">

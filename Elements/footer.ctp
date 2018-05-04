@@ -1,13 +1,14 @@
 <section class="footer">
     <div class="container">
         <div class="pre-footer row">
+            <?php if(!isset($theme_config['theme-infos']) || $theme_config['theme-infos'] == "true") { ?>
             <div class="informations col-md-3">
                 <h3>Informations</h3>
-                <p>Maven est un serveur factice conçu en Avril 2018
-                    <br><br>
-                    Il s’inscrit comme l’un des meilleurs serveurs factices, même si personne ne peut vraiment le vérifier.</p>
+                <p><?= $theme_config['theme-infos-text']; ?></p>
             </div>
+            <?php } ?>
             <?php if($EyPlugin->isInstalled('eywek.vote')) { ?>
+            <?php if(!isset($theme_config['theme-ranking']) || $theme_config['theme-ranking'] == "true") { ?>
             <div class="classement offset-md-1 col-md-8">
                 <h3>Nos meilleurs joueurs</h3>
                 <?php $users_vote = ClassRegistry::init('Vote.Vote')->find('all', [
@@ -29,6 +30,7 @@
                 </div>
                 <?php endforeach; ?>
             </div>
+            <?php } ?>
             <?php } ?>
         </div>
         <div class="separation"></div>

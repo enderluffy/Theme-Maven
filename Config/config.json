@@ -1,15 +1,42 @@
 {
-    "name":"Maven",
-    "slug":"Maven",
-    "author":"Orphevs",
-    "version":"1.0.0",
-    "apiID":0,
-    "slider":true,
-    "configurations":{
-        "slider":"true",
-        "navbar":"navbar2",
-        "favicon_url":"",
-        "logo":false
+    "name": "Maven",
+    "slug": "Maven",
+    "author": "Orphevs",
+    "version": "1.0.0",
+    "apiID": 0,
+    "slider": true,
+    "configurations": {
+        "favicon_url": "",
+        "theme-features": "true",
+        "theme-features-title-1": "3 ans",
+        "theme-features-description-1": "que nous partageons et jouons ensemble",
+        "theme-features-img-1": "",
+        "theme-features-title-2": "Plus de 100",
+        "theme-features-description-2": "joueurs actifs vous attendent",
+        "theme-features-img-2": "",
+        "theme-features-title-3": "Toujours plus",
+        "theme-features-description-3": "d'aventures vous attendent sur ce serveur",
+        "theme-features-img-3": "",
+        "theme-features-title-4": "Rejoignez",
+        "theme-features-description-4": "cette communaut\u00e9 qui n'attend que vous",
+        "theme-features-img-4": "",
+        "theme-counter": "true",
+        "theme-counter-launcher": "false",
+        "theme-counter-ip": "127.0.0.1",
+        "theme-vote": "true",
+        "theme-vote-img": "",
+        "theme-vote-text": "",
+        "theme-social": "true",
+        "theme-discord": "true",
+        "theme-discord-id": "",
+        "theme-infos": "true",
+        "theme-infos-text": "Lorem ipsum dolor sit amet\r\n<br><br>\r\nSed faucibus aliquam ex non malesuada. Nam dignissim urna vel placerat volutpat.",
+        "theme-ranking": "true",
+        "logo": false
     },
-    "supported":{}
+    "supported": {
+        "eywek.shop": "^1.2.4",
+        "eywek.vote": "^2.0.7",
+        "phpierre.vote": "^1.4.3"
+    }
 }
