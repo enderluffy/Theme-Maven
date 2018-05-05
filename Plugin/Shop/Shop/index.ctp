@@ -6,11 +6,13 @@
         <h1 class="title"><?= $Lang->get('SHOP__TITLE'); ?></h1>         
      </div>
     <div class="col-md-3 sidebar">
+        <?php if($isConnected) { ?>
         <div class="panel-shop-credits">
             <h3 class="panel-title">
                 <?= ($isConnected) ? $money.' '.$Configuration->getMoneyName() : null ?>
             </h3>
         </div>
+        <?php } ?>
         <div class="list-group">
             <?php
             $i = 0;
