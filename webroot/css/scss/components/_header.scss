@@ -106,44 +106,44 @@
                 }
             }
             
-            li a::before{
-                content: attr(data-name);
-                position: absolute;
-                height: 2px;
-                width: auto;
-                background: transparent;
-                color: transparent;
-                pointer-events: none;
-                opacity: 1;
-                transition: $transition;
-                top: 44px;
-            }
-            
-            li a:hover::before{
-                content: attr(data-name);
-                position: absolute;
-                height: 2px;
-                width: auto;
-                background: $selected-color;
-                color: transparent;
-                pointer-events: none;
-                opacity: 1;
-                transition: $transition;
-                top: 44px;
-            }
-            
-            .actived > a::before{
-                content: attr(data-name);
-                position: absolute;
-                height: 2px;
-                width: auto;
-                background: $selected-color;
-                color: transparent;
-                pointer-events: none;
-                opacity: 1;
-                transition: $transition;
-                top: 44px;                
-            } 
+//            li a::before{
+//                content: attr(data-name);
+//                position: absolute;
+//                height: 2px;
+//                width: auto;
+//                background: transparent;
+//                color: transparent;
+//                pointer-events: none;
+//                opacity: 1;
+//                transition: $transition;
+//                top: 44px;
+//            }
+//            
+//            li a:hover::before{
+//                content: attr(data-name);
+//                position: absolute;
+//                height: 2px;
+//                width: auto;
+//                background: $selected-color;
+//                color: transparent;
+//                pointer-events: none;
+//                opacity: 1;
+//                transition: $transition;
+//                top: 44px;
+//            }
+//            
+//            .actived > a::before{
+//                content: attr(data-name);
+//                position: absolute;
+//                height: 2px;
+//                width: auto;
+//                background: $selected-color;
+//                color: transparent;
+//                pointer-events: none;
+//                opacity: 1;
+//                transition: $transition;
+//                top: 44px;                
+//            } 
         }
     }
     
