@@ -9,7 +9,7 @@
         <?php if($isConnected) { ?>
         <div class="panel-shop-credits">
             <h3 class="panel-title">
-                <?= ($isConnected) ? $money.' '.$Configuration->getMoneyName() : null ?>
+                <?= ($isConnected) ? $money ?>
             </h3>
         </div>
         <?php } ?>
